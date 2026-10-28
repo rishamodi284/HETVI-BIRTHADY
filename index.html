@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday MY WORLD,HETVI... ❤️🎂</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+    font-family:"Trebuchet MS","Comic Sans MS",Arial,sans-serif;
+    background:linear-gradient(135deg,#ffd8eb,#ddd4ff);
+}
+
+/* Background */
+#floating{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.float{
+    position:absolute;
+    bottom:-60px;
+    animation:floatUp linear infinite;
+    opacity:0;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    15%{
+        opacity:.8;
+    }
+    100%{
+        transform:translateY(-115vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Pages */
+.page{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:70px 15px 90px;
+
+    overflow-y:auto;
+    z-index:10;
+}
+
+.page.active{
+    display:flex;
+    animation:pageIn .45s ease;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:scale(.94);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Card */
+.card{
+    width:min(850px,94vw);
+    max-height:calc(100vh - 150px);
+    overflow-y:auto;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.95);
+    border:3px solid white;
+    border-radius:35px;
+
+    box-shadow:0 20px 70px rgba(70,40,100,.22);
+}
+
+h1{
+    color:#ff4d98;
+    font-size:clamp(35px,7vw,65px);
+    margin-bottom:15px;
+}
+
+h2{
+    color:#8054d6;
+    font-size:clamp(25px,5vw,42px);
+    margin:12px 0;
+}
+
+h3{
+    color:#ff4d98;
+    margin:10px 0;
+}
+
+p{
+    color:#555;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* Buttons */
+.btn{
+    border:0;
+    border-radius:50px;
+
+    padding:14px 24px;
+    margin:10px 5px;
+
+    color:white;
+    background:linear-gradient(90deg,#ff559e,#8158dc);
+
+    font-family:inherit;
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.04);
+    box-shadow:0 10px 25px rgba(100,50,150,.25);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+/* Page counter */
+#counter{
+    position:fixed;
+    top:15px;
+    left:15px;
+
+    z-index:1000;
+
+    background:white;
+    color:#8054d6;
+
+    padding:9px 15px;
+    border-radius:30px;
+
+    font-weight:bold;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+/* Navigation */
+.nav{
+    position:fixed;
+    bottom:15px;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    gap:8px;
+
+    z-index:1000;
+}
+
+.nav .btn{
+    margin:0;
+}
+
+/* TEDDY BEER*/
+.teddy beer{
+    font-size:115px;
+    animation:teddy beer 1.4s infinite;
+}
+
+@keyframes teddy beer{
+    0%,100%{
+        transform:translateY(0) rotate(0);
+    }
+    50%{
+        transform:translateY(-12px) rotate(4deg);
+    }
+}
+
+/* Gifts */
+.gifts{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+
+    max-width:650px;
+    margin:25px auto;
+}
+
+.gift{
+    font-size:60px;
+    cursor:pointer;
+    animation:gift 1.5s infinite;
+    transition:.2s;
+}
+
+.gift:hover{
+    transform:scale(1.2) rotate(5deg);
+}
+
+@keyframes gift{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* Magic */
+.magic{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:25px 0;
+}
+
+.magicBox{
+    width:180px;
+    padding:20px 12px;
+
+    border-radius:28px;
+
+    background:linear-gradient(135deg,#ffe2ef,#e5ddff);
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.magicBox:hover{
+    transform:scale(1.06) rotate(-2deg);
+}
+
+.magicEmoji{
+    font-size:55px;
+}
+
+/* Clue */
+.clue{
+    max-width:650px;
+    margin:25px auto;
+    padding:25px;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#fff1a8,#ffd9eb);
+}
+
+/* Cake */
+.cake{
+    font-size:120px;
+    margin:20px;
+
+    animation:cake 1.3s infinite;
+}
+
+@keyframes cake{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Envelope */
+.envelope{
+    font-size:130px;
+    cursor:pointer;
+    animation:envelope 1.5s infinite;
+}
+
+@keyframes envelope{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.letter{
+    display:none;
+
+    max-width:650px;
+    margin:20px auto;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    background:#fff2f8;
+
+    text-align:left;
+}
+
+/* Food popup */
+.popup{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(30,10,50,.65);
+
+    padding:20px;
+
+    z-index:5000;
+}
+
+.popup.show{
+    display:flex;
+}
+
+.popupBox{
+    width:min(500px,92vw);
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:35px;
+
+    animation:popup .4s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.3) rotate(-8deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1) rotate(0);
+        opacity:1;
+    }
+}
+
+.food{
+    font-size:95px;
+    animation:food 1s infinite;
+}
+
+@keyframes food{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Bubble effect */
+.bubble{
+    position:fixed;
+    z-index:6000;
+    pointer-events:none;
+
+    font-size:30px;
+
+    animation:bubble .8s ease forwards;
+}
+
+@keyframes bubble{
+    from{
+        transform:scale(.2) translateY(0);
+        opacity:0;
+    }
+    30%{
+        opacity:1;
+    }
+    to{
+        transform:scale(1.3) translateY(-90px);
+        opacity:0;
+    }
+}
+
+/* Confetti */
+.confetti{
+    position:fixed;
+    top:-40px;
+    z-index:7000;
+    pointer-events:none;
+
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .card{
+        padding:25px 15px;
+    }
+
+    .panda{
+        font-size:90px;
+    }
+
+    .cake{
+        font-size:90px;
+    }
+
+    .gifts{
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
+    }
+
+    .gift{
+        font-size:48px;
+    }
+
+    .magicBox{
+        width:130px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .nav .btn{
+        padding:11px 17px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div id="floating"></div>
+
+<!-- Page counter -->
+<div id="counter">Page 1 / 10</div>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="page active">
+
+<div class="card">
+
+    <div class="teddy beer"></div>
+
+    <h1>✨ A Special Surprise ✨💫</h1>
+
+    <h2>For MY LOVE, 💖</h2>
+
+    <p>
+        Something cute, magical and completely
+        birthday-worthy is waiting for you! 🎁
+    </p>
+
+    <button class="btn" onclick="goNext()">
+        💖 START
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <div style="font-size:80px;">
+        🎈🎂🎈
+    </div>
+
+    <h1>3... 2... 1...</h1>
+
+    <h2>🎉 HAPPY BIRTHDAY 🎉</h2>
+
+    <h1>MY PRINCESS</h1>
+
+    <p>
+        Today is your special day! 💕
+    </p>
+
+    <button class="btn" onclick="goNext()">
+        ✨ CONTINUE
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <div class="TEDDY BEER"></div>
+
+    <h2>I Have A Message! 🫶</h2>
+
+    <p>
+        HI MY QUEEN,! 👋
+    </p>
+
+    <br>
+
+    <p>
+        I prepared a magical birthday adventure
+        just for you! 🎁✨🫰
+    </p>
+
+    <br>
+
+    <p>
+        Are you ready?
+    </p>
+
+    <button class="btn" onclick="goNext()">
+        🫰LET'S GO!💓
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <h2>🎁 Magical Gifts 🎁</h2>
+
+    <p>
+        Click the gifts to discover your surprises!
+    </p>
+
+    <div class="gifts">
+
+        </div>
+
+        <div class="gift"
+        onclick="food('🍩','DONUT!','A sweet donut for HETVI! 🍩')">
+            🎁
+        </div>
+
+        <div class="gift"
+        onclick="food('🧁','CUPCAKE!','A tiny cupcake with huge wishes! 🧁')">
+            🎁
+        </div>
+
+        <div class="gift"
+        onclick="food('🍫','CHOCOLATE!','Extra chocolate happiness! 🍫')">
+            🎁
+        </div>
+
+        <div class="gift"
+        onclick="food('🍭','LOLLIPOP!','Sweet birthday vibes! 🍭')">
+            🎁
+        </div>
+
+        <div class="gift"
+        onclick="food('🍰','CAKE!','Birthday cake for HETVI! 🎂')">
+            🎁
+        </div>
+
+    </div>
+
+    <button class="btn" onclick="goNext()">
+        💫 NEXT
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 5
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <h2>✨ Choose Your Magic ✨</h2>
+
+    <p>
+        ANGEL, choose one magical power!
+    </p>
+
+    <div class="magic">
+
+        <div class="magicBox"
+        onclick="magic('💖 Happiness Magic Unlocked!')">
+
+            <div class="magicEmoji">💖</div>
+
+            <h3>HAPPINESS</h3>
+
+            <p>
+                More smiles!
+            </p>
+
+        </div>
+
+
+        <div class="magicBox"
+        onclick="magic('🌈 Luck Magic Unlocked!')">
+
+            <div class="magicEmoji">🌈</div>
+
+            <h3>LUCK</h3>
+
+            <p>
+                Good luck everywhere!
+            </p>
+
+        </div>
+
+
+        <div class="magicBox"
+        onclick="magic('⭐ Dream Magic Unlocked!')">
+
+            <div class="magicEmoji">⭐</div>
+
+            <h3>DREAMS</h3>
+
+            <p>
+                Dreams come true!
+            </p>
+
+        </div>
+
+    </div>
+
+    <h2 id="magicResult">
+        🔮 Choose one!
+    </h2>
+
+    <button class="btn" onclick="goNext()">
+        🔎 TREASURE HUNT
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 6
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <div style="font-size:75px;">
+        🔎💎
+    </div>
+
+    <h2>🔎 Secret Treasure Hunt</h2>
+
+    <p>
+        Find the hidden treasure!
+    </p>
+
+    <div class="clue">
+
+        <h2 id="clueTitle">
+            🔐 Clue 1
+        </h2>
+
+        <p id="clueText">
+            Follow the path of happiness... 😊
+        </p>
+
+        <button class="btn" onclick="nextClue()">
+            🔎 NEXT CLUE
+        </button>
+
+    </div>
+
+    <div id="treasure" style="display:none;">
+
+        <div style="font-size:75px;">
+            💎🎁💫
+        </div>
+
+        <h2>🎉 TREASURE FOUND! 🎉</h2>
+
+        <p>
+            The greatest treasure is a LOVE
+            like YOU ! 💖
+        </p>
+
+    </div>
+
+    <!-- THIS ALWAYS MOVES TO PAGE 7 -->
+
+    <button class="btn" onclick="goNext()">
+        🎂 GO TO CAKE
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 7
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <h2>🎂 Make A Wish 🎂</h2>
+
+    <p>
+        Close your eyes and make a big wish!
+    </p>
+
+    <div class="cake" id="cake">
+        🕯️🎂
+    </div>
+
+    <button class="btn" onclick="blow()">
+        💨 BLOW THE CANDLE
+    </button>
+
+    <h2 id="wish"></h2>
+
+    <button class="btn" onclick="goNext()">
+        💕 NEXT
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 8
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <h2>💕 LOVE LEVEL Quiz 💕</h2>
+
+    <h3>
+        Who is officially awesome? ⭐
+    </h3>
+
+    <button class="btn"
+    onclick="quiz()">
+         Friends 👥
+    </button>
+
+    <button class="btn"
+    onclick="quiz()">
+        👑 HETVI❤️
+    </button>
+
+    <h2 id="quizResult"></h2>
+
+    <br>
+
+    
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 9
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <h2>💌 One Last Secret...</h2>
+
+    <p>
+        There is a secret message inside!
+    </p>
+
+    <div class="envelope"
+    onclick="openLetter()">
+        💌
+    </div>
+
+    <button class="btn"
+    onclick="openLetter()">
+        💌 OPEN LETTER
+    </button>
+
+    <div class="letter" id="letter">
+
+        <h2>Dear HETVI 💖</h2>
+
+        <p>
+            You are one of those special people
+            who make ordinary moments amazing.
+        </p>
+
+        <br>
+
+        <p>
+            I hope your life is always filled with:
+        </p>
+
+        <br>
+
+        <p>
+            😊 Happiness<br>
+            💖 Love<br>
+            🌈 Beautiful memories<br>
+            ⭐ Amazing dreams<br>
+            😂 Lots of laughter
+        </p>
+
+        <br>
+
+        <p>
+            Never stop smiling.
+            Keep dreaming.
+            Keep being yourself.
+        </p>
+
+        <br>
+
+        <h2>
+            👑💖 HAPPY BIRTHDAY MY GIRL! 💖👑
+        </h2>
+
+    </div>
+
+    <button class="btn" onclick="goNext()">
+        🎉 FINAL SURPRISE
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 10
+===================================================== -->
+
+<section class="page">
+
+<div class="card">
+
+    <div class="Deer"></div>
+
+    <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+    <h1>HETVI</h1>
+
+    <div style="font-size:50px;">
+        🎈 🎂 🎁 ✨ 💖
+    </div>
+
+    <h2>
+        May this be your best year ever! 🌈
+    </h2>
+
+    <p>
+        Keep smiling. 😊
+    </p>
+
+    <p>
+        Keep dreaming. ⭐
+    </p>
+
+    <p>
+        Keep being YOU! 💖
+    </p>
+
+    <br>
+
+    <h2>
+        💫💖 YOU ARE AWESOME AND VERY BEUTIFUL ! 💖💫
+      </h2>
+<h3> 💫💓 YOU CAME IN MY LIFE LIKE AN ANGEL...💓
+    </h3>
+<h1> 🫶💓I LOVE YOU...💓🫶</h1>
+    <button class="btn"
+    onclick="celebrate()">
+        🎊 CELEBRATE! 🎊
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOD POPUP
+===================================================== -->
+
+<div class="popup" id="popup">
+
+    <div class="popupBox">
+
+        <div class="food" id="foodEmoji">
+            🍕
+        </div>
+
+        <h2 id="foodTitle">
+            YUMMY!
+        </h2>
+
+        <p id="foodText">
+            Surprise!
+        </p>
+
+        <button class="btn"
+        onclick="closePopup()">
+            💖 AWWW!
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<div class="nav">
+
+    <button class="btn" onclick="goBack()">
+        ⬅️ BACK
+    </button>
+
+    <button class="btn" onclick="goNext()">
+        NEXT ➡️
+    </button>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   SIMPLE PAGE SYSTEM
+===================================================== */
+
+const pages = document.querySelectorAll(".page");
+
+let current = 0;
+
+function showPage(number){
+
+    if(number < 0){
+        number = 0;
+    }
+
+    if(number >= pages.length){
+        number = pages.length - 1;
+    }
+
+    pages.forEach(function(page){
+        page.classList.remove("active");
+    });
+
+    pages[number].classList.add("active");
+
+    current = number;
+
+    document.getElementById("counter").textContent =
+        "Page " + (current + 1) + " / 10";
+
+    bubbleEffect();
+}
+
+
+function goNext(){
+
+    if(current < pages.length - 1){
+
+        showPage(current + 1);
+
+    }
+
+}
+
+
+function goBack(){
+
+    if(current > 0){
+
+        showPage(current - 1);
+
+    }
+
+}
+
+
+/* =====================================================
+   FOOD POPUP
+===================================================== */
+
+function food(emoji,title,text){
+
+    document.getElementById("foodEmoji").textContent =
+        emoji;
+
+    document.getElementById("foodTitle").textContent =
+        title;
+
+    document.getElementById("foodText").textContent =
+        text;
+
+    document.getElementById("popup").classList.add("show");
+
+    popSound();
+
+    bubbleEffect();
+
+}
+
+
+function closePopup(){
+
+    document.getElementById("popup")
+        .classList.remove("show");
+
+    popSound();
+
+}
+
+
+/* =====================================================
+   MAGIC
+===================================================== */
+
+function magic(message){
+
+    document.getElementById("magicResult")
+        .textContent = message;
+
+    popSound();
+
+    bubbleEffect();
+
+}
+
+
+/* =====================================================
+   TREASURE CLUES
+===================================================== */
+
+let clueNumber = 0;
+
+const clueList = [
+
+    "Follow the path of happiness... 😊",
+
+    "Look where the teddy beer smiles... 🐻‍❄️",
+
+    "You are getting closer... ✨",
+
+    "The treasure is almost yours! 🎁"
+
+];
+
+
+function nextClue(){
+
+    if(clueNumber < clueList.length){
+
+        document.getElementById("clueTitle")
+            .textContent =
+            "🔐 Clue " + (clueNumber + 1);
+
+        document.getElementById("clueText")
+            .textContent =
+            clueList[clueNumber];
+
+        clueNumber++;
+
+        popSound();
+        bubbleEffect();
+
+    }
+
+    else{
+
+        document.getElementById("clueTitle")
+            .textContent =
+            "💎 TREASURE FOUND!";
+
+        document.getElementById("clueText")
+            .textContent =
+            "You found the secret treasure! 🎉";
+
+        document.getElementById("treasure")
+            .style.display = "block";
+
+        celebrate();
+
+    }
+
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+function blow(){
+
+    document.getElementById("cake")
+        .textContent = "💨🎂";
+
+    document.getElementById("wish")
+        .textContent =
+        "✨ HETVI'S WISH HAS BEEN SENT! ✨";
+
+    popSound();
+
+    celebrate();
+
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+function quiz(){
+
+    document.getElementById("quizResult")
+        .textContent =
+        "🏆 LOVE LEVEL: INFINITE! 💖";
+
+    popSound();
+
+    bubbleEffect();
+
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+function openLetter(){
+
+    document.getElementById("letter")
+        .style.display = "block";
+
+    popSound();
+
+    bubbleEffect();
+
+}
+
+
+/* =====================================================
+   BUBBLES
+===================================================== */
+
+function bubbleEffect(){
+
+    const symbols = [
+        "💖",
+        "💕",
+        "💗",
+        "🫧",
+        "✨",
+        "⭐"
+    ];
+
+    for(let i=0;i<8;i++){
+
+        const b =
+            document.createElement("div");
+
+        b.className = "bubble";
+
+        b.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        b.style.left =
+            (20 + Math.random()*60) + "vw";
+
+        b.style.top =
+            (40 + Math.random()*30) + "vh";
+
+        document.body.appendChild(b);
+
+        setTimeout(function(){
+            b.remove();
+        },900);
+
+    }
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function celebrate(){
+
+    const symbols = [
+        "💞",
+        "💓",
+        "✨",
+        "💕",
+        "💖",
+        "💗",
+        "🫶",
+        "💝",
+        "⭐",
+        "🫰",
+        "💘"
+    ];
+
+    for(let i=0;i<70;i++){
+
+        const c =
+            document.createElement("div");
+
+        c.className = "confetti";
+
+        c.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        c.style.left =
+            Math.random()*100 + "vw";
+
+        c.style.fontSize =
+            (15 + Math.random()*22) + "px";
+
+        c.style.animationDuration =
+            (2 + Math.random()*3) + "s";
+
+        document.body.appendChild(c);
+
+        setTimeout(function(){
+            c.remove();
+        },5500);
+
+    }
+
+    popSound();
+
+}
+
+
+/* =====================================================
+   CUTE POP SOUND
+   No external audio required.
+===================================================== */
+
+function popSound(){
+
+    try{
+
+        const Audio =
+            window.AudioContext ||
+            window.webkitAudioContext;
+
+        if(!Audio){
+            return;
+        }
+
+        const audio =
+            new Audio();
+
+        const oscillator =
+            audio.createOscillator();
+
+        const gain =
+            audio.createGain();
+
+        oscillator.type = "sine";
+
+        oscillator.frequency.setValueAtTime(
+            650,
+            audio.currentTime
+        );
+
+        oscillator.frequency.exponentialRampToValueAtTime(
+            180,
+            audio.currentTime + .12
+        );
+
+        gain.gain.setValueAtTime(
+            .0001,
+            audio.currentTime
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            .15,
+            audio.currentTime + .01
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            .0001,
+            audio.currentTime + .13
+        );
+
+        oscillator.connect(gain);
+
+        gain.connect(audio.destination);
+
+        oscillator.start();
+
+        oscillator.stop(
+            audio.currentTime + .14
+        );
+
+    }
+    catch(error){
+
+        /* Sound is optional */
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING BACKGROUND
+===================================================== */
+
+const floating =
+    document.getElementById("floating");
+
+const floatSymbols = [
+    "💖",
+    "💕",
+    "✨",
+    "⭐",
+    "🌸",
+    "🫧",
+    "💘",
+    "🎀",
+    "🎁",
+    "🎈"
+];
+
+for(let i=0;i<35;i++){
+
+    const item =
+        document.createElement("div");
+
+    item.className = "float";
+
+    item.textContent =
+        floatSymbols[
+            Math.floor(
+                Math.random() *
+                floatSymbols.length
+            )
+        ];
+
+    item.style.left =
+        Math.random()*100 + "%";
+
+    item.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+    item.style.animationDuration =
+        (5 + Math.random()*8) + "s";
+
+    item.style.animationDelay =
+        (Math.random()*8) + "s";
+
+    floating.appendChild(item);
+
+}
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "ArrowRight"){
+            goNext();
+        }
+
+        if(event.key === "ArrowLeft"){
+            goBack();
+        }
+
+    }
+);
+
+
+/* =====================================================
+   START PAGE
+===================================================== */
+
+showPage(0);
+
+</script>
+
+</body>
+</html>
